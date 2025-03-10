@@ -1,4 +1,5 @@
 <?php
+require_once 'UserInterface.php';
 
 // Factory class for creating and deleting users
 class UserFactory {
@@ -13,8 +14,8 @@ class UserFactory {
     }
 }
 
-// User class to represent user data
-class User {
+// User class implementing UserInterface
+class User implements UserInterface {
     public $userid;
     public $first_name;
     public $last_name;
@@ -29,6 +30,22 @@ class User {
         $this->email = $data['email'];
         $this->password = $data['password'];
         $this->url_address = strtolower($this->first_name) . "." . strtolower($this->last_name);
+    }
+
+    public function getUserId() {
+        return $this->userid;
+    }
+
+    public function getFirstName() {
+        return $this->first_name;
+    }
+
+    public function getLastName() {
+        return $this->last_name;
+    }
+
+    public function getEmail() {
+        return $this->email;
     }
 }
 
@@ -63,3 +80,4 @@ class Signup {
         UserFactory::deleteUser($userid);
     }
 }
+?>
