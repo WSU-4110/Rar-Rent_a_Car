@@ -1,16 +1,3 @@
-<?php
-session_start();
-
-// Check if user is logged in
-if (!isset($_SESSION['Rar_userid'])) {
-    header("Location: login.php");
-    exit();
-}
-
-// Get username from session
-$username = isset($_SESSION['Rar_username']) ? $_SESSION['Rar_username'] : 'Guest';
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
