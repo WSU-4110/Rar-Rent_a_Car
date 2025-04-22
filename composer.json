@@ -1,27 +1,12 @@
 {
-    "name": "rar-rent-a-car",
-    "description": "Unit testing for RAR Rent-a-Car project",
+    "name": "wsu4110/rar",
+    "description": "Rent a Car - Unit Testing Assignment",
     "require-dev": {
-      "phpunit/phpunit": "^11.5"
+        "phpunit/phpunit": "^11.5"
     },
     "autoload": {
-      "psr-4": {
-        "": "./"
-      }
-    },
-    "autoload-dev": {
-      "psr-4": {
-        "Tests\\": "tests/"
-      }
-    },
-    "authors": [
-      {
-        "name": "Michelle Williams",
-        "email": "mic.williams879@gmail.com"
-      },
-      {
-        "name": "Faiza Laskar",
-        "email": "faizaklaskar@gmail.com"
-      }
-    ]
-  }
+        "psr-4": {
+            "": "tests/"
+        }
+    }
+}
