@@ -1,0 +1,17 @@
+{
+    "name": "michelle/rar-unit-test",
+    "description": "Unit testing for RAR Rent-a-Car project",
+    "require-dev": {
+        "phpunit/phpunit": "10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "./"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
