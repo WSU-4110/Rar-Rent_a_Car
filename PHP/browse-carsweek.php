@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Car Filter</title>
-  <link rel="stylesheet" href="../CSS/browse-carsweek.css">
+  <link rel="stylesheet" href="../CSS/browse-cars.css">
 </head>
 <body>
   <h2 class="title">Filter Available Cars</h2>
@@ -145,7 +145,7 @@
         <option>Plug-in Hybrid</option>
       </select>
 
-      <input type="number" name="rental_price_per_day" placeholder="Max Price/Day">
+      <input type="number" name="rental_price_per_week" placeholder="Max Price/Week">
 
       <select name="availability_status">
         <option value="">Availability</option>
@@ -159,7 +159,7 @@
   </form>
 
   <div class="results">
-    <?php include 'fetch_cars.php'; ?>
+    <?php include 'fetch_carsweek.php'; ?>
   </div>
 </body>
 </html>

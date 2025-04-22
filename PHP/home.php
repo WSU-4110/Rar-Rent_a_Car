@@ -1,25 +1,11 @@
-<?php
-session_start();
-
-// Check if user is logged in
-if (!isset($_SESSION['Rar_userid'])) {
-    header("Location: login.php");
-    exit();
-}
-
-// Get username from session
-$username = isset($_SESSION['Rar_username']) ? $_SESSION['Rar_username'] : 'Guest';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>RAR - Home</title>
     <link rel="stylesheet" href="../CSS/home.css">
+
 </head>
 <body>
     <div class="navbar">
@@ -156,39 +142,19 @@ $username = isset($_SESSION['Rar_username']) ? $_SESSION['Rar_username'] : 'Gues
     <!-- Meet the Hosts Section -->
     <section id="meet-the-hosts">
     <h2>Meet the Hosts</h2>
-<<<<<<< HEAD:home.php
-    <div class="hosts-container">
-        <div class="host">
-            <img src="https://via.placeholder.com/150" alt="Michelle Williams">
-=======
     <br>
     <div class="hosts-container">
         <div class="host">
             <img src="../logoimages/m.png" alt="Michelle Williams">
->>>>>>> b8f7a7fbc02c668f2e0315b0ec4b7380c02f3773:PHP/home.php
             <h3>Michelle Williams</h3>
             <p>Email: <a href="mailto:hh0111@wayne.edu">hh0111@wayne.edu</a></p>
         </div>
         <div class="host">
-<<<<<<< HEAD:home.php
-            <img src="https://via.placeholder.com/150" alt="Faiza Laskar">
-            <h3>Faiza Laskar</h3>
-            <p>Email: <a href="mailto:hh0237@wayne.edu">hh0237@wayne.edu</a></p>
-        </div>
-        <div class="host">
-            <img src="https://via.placeholder.com/150" alt="Tim Bui">
-=======
             <img src="../logoimages/t.png" alt="Tim Bui">
->>>>>>> b8f7a7fbc02c668f2e0315b0ec4b7380c02f3773:PHP/home.php
             <h3>Tim Bui</h3>
             <p>Email: <a href="mailto:buitimanh@wayne.edu">buitimanh@wayne.edu</a></p>
         </div>
         <div class="host">
-<<<<<<< HEAD:home.php
-            <img src="https://via.placeholder.com/150" alt="Dheye Algalhan">
-            <h3>Dheye Algalhan</h3>
-            <p>Email: <a href="mailto:hz8323@wayne.edu">hz8323@wayne.edu</a></p>
-=======
             <img src="../logoimages/d.png" alt="Dheye Algalhan">
             <h3>Dheye Algalhan</h3>
             <p>Email: <a href="mailto:hz8323@wayne.edu">hz8323@wayne.edu</a></p>
@@ -197,7 +163,6 @@ $username = isset($_SESSION['Rar_username']) ? $_SESSION['Rar_username'] : 'Gues
             <img src="../logoimages/f.png" alt="Faiza Laskar">
             <h3>Faiza Laskar</h3>
             <p>Email: <a href="mailto:faizaklaskar@gmail.com">faizaklaskar@gmail.com</a></p>
->>>>>>> b8f7a7fbc02c668f2e0315b0ec4b7380c02f3773:PHP/home.php
         </div>
     </div>
 </section>
@@ -205,24 +170,7 @@ $username = isset($_SESSION['Rar_username']) ? $_SESSION['Rar_username'] : 'Gues
     <h2>Contact Us</h2>
     <div class="contact-box">
         <p>For any inquiries, reach out to us:</p>
-<<<<<<< HEAD:home.php
-        <p>Email: <a href="mailto:team@yourproject.com">team@yourproject.com</a></p>
-    </div>
-</section>
-
-    <!-- Contact Information Section -->
-    <div id="contact-info" class="contact-info">
-        <h2>Contact Us</h2>
-        <ul>
-            <li>Faiza Laskar - Phone: 313-603-1960 - Email: hh0237@wayne.edu</li>
-            <li>Teammate one - Phone: 123-456-7891 - Email: aa1234@wayne.edu</li>
-            <li>Teammate two - Phone: 123-456-7892 - Email: ab1234@wayne.edu</li>
-            <li>Teammate three - Phone: 123-456-7893 - Email: ac1234@wayne.edu</li>
-            <li>Teammate four - Phone: 123-456-7894 - Email: ad1234@wayne.edu</li>
-        </ul>
-=======
         <p>Email: <a href="mailto:Rar@wayne.edu.com">Rar@wayne.edu</a></p>
->>>>>>> b8f7a7fbc02c668f2e0315b0ec4b7380c02f3773:PHP/home.php
     </div>
 </section>
 
