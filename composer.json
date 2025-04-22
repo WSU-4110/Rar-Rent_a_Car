@@ -1,17 +1,27 @@
 {
-    "name": "michelle/rar-unit-test",
+    "name": "rar-rent-a-car",
     "description": "Unit testing for RAR Rent-a-Car project",
     "require-dev": {
-        "phpunit/phpunit": "10.0"
+      "phpunit/phpunit": "^11.5"
     },
     "autoload": {
-        "psr-4": {
-            "": "./"
-        }
+      "psr-4": {
+        "": "./"
+      }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    }
-}
+      "psr-4": {
+        "Tests\\": "tests/"
+      }
+    },
+    "authors": [
+      {
+        "name": "Michelle Williams",
+        "email": "mic.williams879@gmail.com"
+      },
+      {
+        "name": "Faiza Laskar",
+        "email": "faizaklaskar@gmail.com"
+      }
+    ]
+  }
