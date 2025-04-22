@@ -1,25 +1,22 @@
-name: Run PHPUnit Tests
+name: PHPUnit GitHub Actions
 
-on:
-  push:
-    branches: [ main, unit-test-submission ]
-  pull_request:
-    branches: [ main ]
+on: [push]
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'
+        php-version: '8.3'
 
     - name: Install dependencies
       run: composer install
 
-    - name: Run PHPUnit tests
-      run: ./vendor/bin/phpunit --testdox
+    - name: Run tests
+      run: ./vendor/bin/phpunit
