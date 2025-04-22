@@ -1,12 +1,24 @@
 {
     "name": "wsu4110/rar",
     "description": "Rent a Car - Unit Testing Assignment",
+    "type": "project",
+    "require": {
+        "php": "^8.2"
+    },
     "require-dev": {
         "phpunit/phpunit": "^11.5"
     },
     "autoload": {
         "psr-4": {
-            "": "tests/"
+            "App\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
     }
 }
