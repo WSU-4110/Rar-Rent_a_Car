@@ -3,10 +3,10 @@
 
 class Database{
 
-    private $host = "localhost";
+    private $host = "rardb.c9g0iygiccbe.us-east-2.rds.amazonaws.com";
     private $username = "root";
-    private $password = "";
-    private $db = "rar_db";
+    private $password = "Poiuytre123*";
+    private $db = "rardb";
 
     function connect(){
         $connection = mysqli_connect($this->host, $this->username, $this->password, $this->db);

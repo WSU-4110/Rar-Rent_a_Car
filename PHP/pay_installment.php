@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "rar_db");
+$conn = new mysqli("rardb.c9g0iygiccbe.us-east-2.rds.amazonaws.com", "root", "Poiuytre123*", "rardb");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }

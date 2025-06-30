@@ -22,6 +22,7 @@
 .menu {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .menu a {
@@ -38,6 +39,7 @@
 .auth-buttons {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .auth-buttons button {
@@ -53,6 +55,83 @@
 .auth-buttons button:hover {
     background-color: #0056b3; /* Button hover color */
 }
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1200;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 260px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.5s ease;
+  z-index: 1100;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.sidebar-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Responsive Rules */
+/* NEW: Hide .desktop-only on mobile */
+@media screen and (max-width: 1200px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* Ensure logo stays on left */
+.logo img {
+  height: 60px;
+}
+
+
+
 
 /* Background Image Styling */
 /* Hero Image Styling */
@@ -72,6 +151,8 @@
 .hero-content {
     color: white;
     text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
 .hero-content h1 {
@@ -96,6 +177,8 @@
     display: flex;
     flex-direction: column;
     align-items: center; /* Center the form elements */
+    width: 90%;
+    max-width: 600px;
 }
 
 .search-section label {
@@ -174,6 +257,8 @@
 .browse-text {
     flex: 1; /* Makes text take the other half */
     text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
 .browse-text h1 {
@@ -249,6 +334,8 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 2px solid #007BFF; /* Optional: Blue outline */
+    width: 90%;
+    max-width: 300px;
 }
 
 
@@ -292,6 +379,8 @@
     border: 3px solid #007BFF; /* Blue colored square outline */
     border-radius: 8px;
     text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
 
@@ -318,3 +407,435 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+.payment-status-box {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .payment-status-box p {
+    margin: 10px 0;
+  }
+  
+  .payment-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2a8cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .payment-button:hover {
+    background: #1a70c5;
+  }
+  .my-payment-section {
+    position: relative;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), /* dark overlay */
+      url('../images/car-background.jpg') no-repeat center center/cover; /* Replace with your image path */
+    color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .my-payment-section h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .my-payment-section .payment-explanation {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: #ddd;
+  }
+  
+  .three-column-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px; /* bigger gap for more breathing room */
+    padding: 80px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1;
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .column h3 {
+    font-size: 32px; /* slightly bigger heading */
+    margin-bottom: 20px;
+    color: #222;
+  }
+  
+  .column p {
+    font-size: 20px; /* larger paragraph */
+    line-height: 1.8;
+    color: #444;
+  }
+  
+  /* Vertical blue bars between columns */
+  .column:not(:last-child) {
+    border-right: 3px solid #007BFF;
+    padding-right: 40px; /* more space for wider text */
+  }
+  
+  .column:not(:first-child) {
+    padding-left: 40px;
+  }
+  .how-it-works-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px; /* more space between columns */
+    padding: 100px;
+   /* background-image: url('your-background.jpg');  Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff; /* light text for contrast on image */
+    flex-wrap: wrap;
+  }
+  
+  .how-it-works-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.404); /* semi-transparent overlay for fade effect */
+    z-index: 0;
+  }
+  
+  .how-it-works-column {
+    width: 90%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .how-it-works-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .how-it-works-column p,
+.how-it-works-column li {
+  font-size: 2opx;
+  line-height: 1.8;
+  color: black; /* Make it white for better visibility */
+}
+
+.how-it-works-column ol {
+  margin-left: 20px;
+  max-width: 100%; /* Let it stretch more */   
+}
+
+  
+  .how-it-works-column li {
+    margin-bottom: 15px;
+  }
+  
+  /* Blue bar between columns */
+  .how-it-works-column:not(:last-child) {
+    border-right: 3px solid #007BFF;
+    padding-right: 50px;
+  }
+  
+  .how-it-works-column:not(:first-child) {
+    padding-left: 50px;
+  }
+  
+  .question-mark img {
+    width: 100%; /* adjust size if needed */
+    height: auto;
+    display: block;
+  }   
+  
+  .redcar-image {
+    margin: 30px auto 0 auto; /* top margin + center horizontally */
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+  
+ 
+  @media screen and (max-width: 768px) {
+    .three-column-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+  
+    .column {
+      width: 100%;
+      max-width: 100%;
+      border: none !important;
+      padding: 0 !important;
+    }
+  
+    .column p {
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+  
+    .column h3 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .browse-cars-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 30px 15px;
+      gap: 20px;
+    }
+  
+    .browse-text h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  
+    .browse-btnn {
+      font-size: 1rem;
+      padding: 10px 18px;
+    }
+  
+    .car-image-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .my-payment-section h2 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    
+    .my-payment-section .payment-explanation {
+      font-size: .8rem;
+      margin-bottom: 25px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-style: italic;
+      color: #ddd;
+    }
+    .my-payment-section {
+      font-size: .7rem;
+    }
+  }  
+  
+  
+  @media screen and (max-width: 768px) {
+    .how-it-works-container {
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+  
+    .how-it-works-column {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      border: none;
+      border-top: 3px solid #007BFF; /* Horizontal blue bar */
+      padding-top: 20px;
+    }
+  
+    .how-it-works-column:first-child {
+      border-top: none;
+    }
+  
+    /* ✅ Remove vertical blue line after first column */
+    .how-it-works-column:not(:last-child) {
+      border: none !important;
+      padding: 0 !important;
+    }
+  
+    .how-it-works-column img {
+      display: none;
+    }
+
+    .car-image-slider .car-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      animation: slide 10s infinite;
+  }
+  
+    
+  }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* --- Three Column Section --- */
+    .three-column-section {
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 30px;
+      gap: 50px;
+    }
+  
+    .column {
+      width: 100%;
+      max-width: 100%;
+      border: none !important;
+      padding: 0 !important;
+    }
+  
+    .column p {
+      border-bottom: 3px solid #007BFF;
+      padding-bottom: 12px;
+      margin-bottom: 22px;
+      font-size: 13px;
+    }
+  
+    .column h3 {
+      text-align: center;
+      font-size: 23px;
+      margin-bottom: 18px;
+    }
+  
+    /* --- Browse Cars Section --- */
+    .browse-cars-container {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      gap: 25px;
+    }
+  
+    .browse-text h1 {
+      font-size: 2.2rem;
+      line-height: 1.3;
+    }
+  
+    .browse-btnn {
+      font-size: 1.1rem;
+      padding: 12px 20px;
+    }
+  
+    .car-image-container {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .car-image-slider .car-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      animation: slide 13s infinite;
+  }
+  
+  .my-payment-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .my-payment-section .payment-explanation {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+    color: #ddd;
+  }
+
+    /* --- How It Works Section --- */
+    .how-it-works-container {
+      flex-direction: column;
+      gap: 50px;
+      padding: 60px 30px;
+    }
+  
+    .how-it-works-column {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      border: none;
+      border-top: 3px solid #007BFF;
+      padding-top: 25px;
+    }
+  
+    .how-it-works-column:first-child {
+      border-top: none;
+    }
+  
+    .how-it-works-column:not(:last-child) {
+      border: none !important;
+      padding: 0 !important;
+    }
+  
+    .how-it-works-column img {
+      display: none;
+    }
+  
+    
+  }
+  @media screen and (max-width: 2000px) {
+    .how-it-works-container {
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px 20px;
+    }
+  
+    .how-it-works-column {
+      max-width: 100%;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      border: none;
+      border-top: 3px solid #007BFF; /* horizontal line */
+      padding-top: 20px;
+    }
+  
+    .how-it-works-column:first-child {
+      border-top: none;
+    }
+  
+    .how-it-works-column:not(:last-child) {
+      border: none !important; /* ✅ REMOVE vertical line */
+      padding: 0 !important;
+    }
+  
+    .how-it-works-column img {
+      display: none; /* ✅ hide ? image */
+    }
+  
+    
+  }
+
+
+  
+  

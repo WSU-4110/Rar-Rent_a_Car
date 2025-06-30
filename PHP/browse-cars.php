@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Car Filter</title>
-  <link rel="stylesheet" href="../CSS/browse-carsweek.css">
+  <link rel="stylesheet" href="../CSS/browse-cars.css">
 </head>
 <body>
   <h2 class="title">Filter Available Cars</h2>
@@ -161,5 +161,6 @@
   <div class="results">
     <?php include 'fetch_cars.php'; ?>
   </div>
+
 </body>
 </html>

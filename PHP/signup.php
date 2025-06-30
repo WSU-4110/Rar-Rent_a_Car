@@ -1,5 +1,4 @@
 <?php
-require_once 'classes/connect.php';
 include("../classes/connect.php");
 include("../classes/signup.php");
 
@@ -35,14 +34,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!--<a href="#hero-image"><img src="Rcarlogo.png" height = 60 width = 30/></a>-->
         <!--<a href="#hero-image"><img src="Rcarlogo.png" alt="Logo" height = 60/></a>-->
         <!--<a href="#hero-image"><img src="Rcarlogo.png" alt="Logo" height="60" style="margin-right: 20px;" /></a>-->
-        <a href="home.php"><img src="Rcarlogo.png" alt="Logo" height="60" style="margin-right: 20px;" /></a>
+        <a href="../index.php"><img src="Rcarlogo.png" alt="Logo" height="60" style="margin-right: 20px;" /></a>
         
         <div class="menu">
-            <a href="home.php">Home</a>
-            <a href="home.php#browse-cars">Browse Cars</a>
+            <a href="../index.php">Home</a>
+            <a href="../index.php#three-column-section">About Us</a>
+            <a href="../index.php#browse-cars">Browse Cars</a>
+            <a href="../index.php#my-payment-section">View Payment</a>
             <a href="help.php">Help</a>
-            <a href="home.php#meet-the-hosts">Meet the Hosts</a>
-            <a href="home.php#contact-info">Contact Us</a>
+            <a href="../index.php#meet-the-hosts">Meet the Hosts</a>
+            <a href="../index.php#contact">Contact Us</a>
         </div>
         <div class="auth-buttons">
             <button onclick="window.location.href='signup.php'">Sign Up</button>
@@ -55,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="signup-container">
             <h1>Create an Account</h1>
             <form id="signup-form" action="signup.php" method="post" onsubmit="return validateForm()">
-                <div class="input-group">
+                <div class="input-group"   >
                     <label for="first_name">First Name</label>
                     <input type="text" id="first_name" name="first_name" placeholder="Enter your first name" required>
                     <small id="first_name-error" class="error-message"></small>
